@@ -23,9 +23,24 @@ a:hover {
 
 /**NAV MENU**/
 
+nav { position: fixed; }
+
 .logo { width: 150px; }
 
 /**MAIN PLAYLIST**/
+
+.container-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tile {
+  color: #FFF;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
 
 /**WIDTHS AND HEIGHTS**/
 
@@ -34,21 +49,25 @@ a:hover {
 /**MARGINS AND PADDINGS**/
 
 .mt-5 { margin-top: 5%; }
+.mr-2 { margin-right: 2%; }
 .mr-5 { margin-right: 5%; }
+.mb-1 { margin-bottom: 1%; }
 .mb-5 { margin-bottom: 5%; }
 
 .pr-0 { padding-right: 0; }
 .pl-0 { padding-left: 0; }
 .p-5 { padding: 5%; }
+.ptb-2 { padding: 2% 0; }
 
 /**TEXT STYLE AND BACKGROUNDS**/
 
 .font-15 { font-size: 15px; }
+.font-bold { font-weight: bold; }
 
 .text-center { text-align: center; }
 
 .text-white, .selected { color: #FFF; }
-.text-light-grey { color: #D7D7D8; }
+.text-light-grey { color: #8c8d8e; }
 
 .bg-black { background-color: #000; }
 .bg-bluetoblack { background: linear-gradient(to right, #363a58 0%,#151622 100%); }
@@ -69,9 +88,9 @@ a:hover {
 }
 
 .btn-grey-border {
-  color: #D7D7D8;
+  color: #8c8d8e;
   background-color: #000;
-  border: 2px solid #D7D7D8;
+  border: 2px solid #8c8d8e;
 }
 
 .btn-grey-border:hover {
