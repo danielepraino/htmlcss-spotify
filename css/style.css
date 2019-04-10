@@ -23,7 +23,7 @@ a:hover {
 
 /**NAV MENU**/
 
-.nav-flex {
+.nav-menu {
   width: 250px;
   height: 100vh;
   display: flex;
@@ -49,11 +49,18 @@ a:hover {
   margin-bottom: 2%;
 }
 
-/**FOOTER-PLAYER**/
+/**PLAYER FOOTER**/
 
-.footer-flex {
+.player {
+  width: 100vw;
   height: 90px;
-  z-index: 1;
+  line-height: 90px;
+  position: fixed;
+  z-index: 2;
+}
+
+.player ul > li {
+  margin-right: 1%;
 }
 
 /**WIDTHS AND HEIGHTS**/
@@ -76,6 +83,7 @@ a:hover {
 
 /**TEXT STYLE AND BACKGROUNDS**/
 
+.font-10 { font-size: 10px; }
 .font-15 { font-size: 15px; }
 .font-bold { font-weight: bold; }
 
