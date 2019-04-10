@@ -23,13 +23,20 @@ a:hover {
 
 /**NAV MENU**/
 
-nav { position: fixed; }
+.nav-flex {
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+}
 
 .logo { width: 150px; }
 
 /**MAIN PLAYLIST**/
 
-.container-flex {
+.main-flex {
+  margin-left: 330px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -53,6 +60,7 @@ nav { position: fixed; }
 .mr-5 { margin-right: 5%; }
 .mb-1 { margin-bottom: 1%; }
 .mb-5 { margin-bottom: 5%; }
+.mb-10 { margin-bottom: 10%; }
 
 .pr-0 { padding-right: 0; }
 .pl-0 { padding-left: 0; }
