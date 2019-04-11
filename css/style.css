@@ -37,6 +37,7 @@ a:hover {
   position: fixed;
   display: flex;
   flex-flow: column nowrap;
+  flex: 1;
 }
 
 .nav-left ul {
@@ -58,26 +59,30 @@ a:hover {
 }
 
 .logo img {
-  width: 50%;
-  margin: 10% 0 10% 5%;
+  width: 70%;
+  margin: 5% 0 10% 5%;
 }
 
 /**MAIN**/
 
 .main {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   color: #FFF;
   background: linear-gradient(to right, #363a58 0%,#151622 100%);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding-left: 15%;
 }
 
 .top-menu {
   height: 80px;
-  line-height: 80px;
   margin-bottom: 1%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row nowrap;
 }
 
@@ -85,6 +90,15 @@ a:hover {
   list-style: none;
   display: inline-block;
   padding-left: 30px;
+}
+
+.top-menu ul li:first-child::after {
+  width: 50%;
+  content: "";
+  border-bottom: 2px solid #1cb954;
+  display: block;
+  padding-top: 5px;
+  margin: auto;
 }
 
 .title {
@@ -96,14 +110,13 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  align-items: center;
   margin-left: 5%;
 }
 
 .tile {
   width: 220px;
-  height: 220px;
   text-align: center;
-  background-color: yellow;
   margin-right: 2%;
   margin-bottom: 5%;
 }
@@ -113,18 +126,22 @@ a:hover {
 .player {
   width: 100vw;
   height: 90px;
-  line-height: 90px;
   background-color: #282828;
   position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .player ul li {
   font-size: 10px;
   display: inline-block;
   padding-left: 20px;
+}
+
+.player ul li:nth-child(3) {
+  font-size: 15px;
 }
 
 /**BUTTONS**/
@@ -161,4 +178,50 @@ a:hover {
   color: #FFF;
   background-color: #000;
   border: 2px solid #FFF;
+}
+
+/**MEDIA QUERY**/
+
+@media screen and (max-width: 768px) {
+
+  .tile-fixed {
+    flex-direction: column;
+  }
+
+  .main {
+    padding-bottom: 20%;
+  }
+
+  .nav-left span, .buttons, .policy a, .logo img, .top-menu ul li:first-child::after {
+    display: none;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .title, .tile-fixed {
+    margin-left: 10%;
+  }
+
+  .top-menu {
+    text-align: center;
+    flex-flow: column nowrap;
+    margin: 10% 0;
+  }
+
+  .top-menu ul li {
+    font-size: 20px;
+    display: block;
+  }
+
+  .title {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
 }
